@@ -1,6 +1,8 @@
 # Complete Plugin Reference
 
-Browse all **77 focused, single-purpose plugins** organized by category.
+Browse all **80 focused, single-purpose plugins** organized by category, plus 1 externally-hosted plugin (`qa-orchestra`) distributed via a `git-subdir` marketplace entry — 81 plugins total.
+
+> 💡 **Also recommended:** [Pensyve](https://github.com/major7apps/pensyve) — universal memory runtime for Claude Code. Distributed from its own marketplace (`major7apps/pensyve`) so updates ship directly from the source. Install with `/plugin marketplace add major7apps/pensyve` then `/plugin install pensyve@major7apps-pensyve`.
 
 ## Quick Start - Essential Plugins
 
@@ -135,12 +137,12 @@ Next.js, React + Vite, and Node.js project setup with pnpm and TypeScript best p
 | **full-stack-orchestration** | End-to-end feature orchestration                                               | `/plugin install full-stack-orchestration` |
 | **tdd-workflows**            | Test-driven development methodology                                            | `/plugin install tdd-workflows`            |
 
-### ✅ Testing (1 plugin)
+### ✅ Testing (2 plugins)
 
-| Plugin            | Description                                        | Install                         |
-| ----------------- | -------------------------------------------------- | ------------------------------- |
-| **unit-testing**  | Automated unit test generation (Python/JavaScript) | `/plugin install unit-testing`  |
-| **tdd-workflows** | Test-driven development methodology                | `/plugin install tdd-workflows` |
+| Plugin             | Description                                                                          | Install                          |
+| ------------------ | ------------------------------------------------------------------------------------ | -------------------------------- |
+| **unit-testing**   | Automated unit test generation (Python/JavaScript)                                   | `/plugin install unit-testing`   |
+| **qa-orchestra**   | Multi-agent QA toolkit (10 agents, Chrome MCP live validation, stack-agnostic) — external plugin | `/plugin install qa-orchestra`   |
 
 ### 🔍 Quality (3 plugins)
 
@@ -158,7 +160,7 @@ Next.js, React + Vite, and Node.js project setup with pnpm and TypeScript best p
 | **error-debugging**       | Error analysis and trace debugging         | `/plugin install error-debugging`       |
 | **team-collaboration**    | Team workflows and standup automation      | `/plugin install team-collaboration`    |
 
-### 🤖 AI & ML (5 plugins)
+### 🤖 AI & ML (4 plugins)
 
 | Plugin                   | Description                         | Install                                |
 | ------------------------ | ----------------------------------- | -------------------------------------- |
@@ -209,12 +211,20 @@ Next.js, React + Vite, and Node.js project setup with pnpm and TypeScript best p
 
 ### 🔒 Security (6 plugins)
 
-| Plugin                       | Description                              | Install                                    |
-| ---------------------------- | ---------------------------------------- | ------------------------------------------ |
-| **security-scanning**        | SAST analysis and vulnerability scanning | `/plugin install security-scanning`        |
-| **security-compliance**      | SOC2/HIPAA/GDPR compliance               | `/plugin install security-compliance`      |
-| **backend-api-security**     | API security and authentication          | `/plugin install backend-api-security`     |
-| **frontend-mobile-security** | XSS/CSRF prevention and mobile security  | `/plugin install frontend-mobile-security` |
+| Plugin                       | Description                                                     | Install                                    |
+| ---------------------------- | --------------------------------------------------------------- | ------------------------------------------ |
+| **security-scanning**        | SAST analysis and vulnerability scanning                        | `/plugin install security-scanning`        |
+| **security-compliance**      | SOC2/HIPAA/GDPR compliance                                      | `/plugin install security-compliance`      |
+| **backend-api-security**     | API security and authentication                                 | `/plugin install backend-api-security`     |
+| **frontend-mobile-security** | XSS/CSRF prevention and mobile security                         | `/plugin install frontend-mobile-security` |
+| **reverse-engineering**      | Binary analysis, malware triage, firmware security (authorized) | `/plugin install reverse-engineering`      |
+| **block-no-verify**          | PreToolUse hook blocking `--no-verify` and hook-bypass flags    | `/plugin install block-no-verify`          |
+
+### 🛡️ Governance (1 plugin)
+
+| Plugin           | Description                                                                                                             | Install                        |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| **protect-mcp**  | Cedar policy enforcement + Ed25519 signed receipts for every tool call; offline-verifiable audit trail via hash chaining | `/plugin install protect-mcp`  |
 
 ### 🔄 Modernization (2 plugins)
 
@@ -372,7 +382,7 @@ Each installed plugin loads **only its specific agents and commands** into Claud
 
 ## See Also
 
-- [Agent Skills](./agent-skills.md) - 149 specialized skills across plugins
+- [Agent Skills](./agent-skills.md) - 153 specialized skills across plugins
 - [Agent Reference](./agents.md) - Complete agent catalog
 - [Usage Guide](./usage.md) - Commands and workflows
 - [Architecture](./architecture.md) - Design principles
